@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# adrianderda.pl — Wizytówka biznesowa
 
-## Getting Started
+Next.js 15 / TypeScript / Tailwind CSS v4 / Framer Motion
 
-First, run the development server:
+## Uruchomienie lokalne
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# → http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Zmienne środowiskowe
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Utwórz plik `.env.local` w katalogu `website/`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# Google Analytics 4 — wdrożenie w drugiej iteracji
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
 
-## Learn More
+## Deploy na Vercel
 
-To learn more about Next.js, take a look at the following resources:
+1. Wejdź na [vercel.com](https://vercel.com) i kliknij **Add New Project**
+2. Zaimportuj repozytorium z GitHuba
+3. **Root Directory** ustaw na `website` (jeśli repo zawiera też brief i example-images)
+4. Dodaj zmienne środowiskowe w ustawieniach projektu
+5. Kliknij **Deploy** — Vercel automatycznie wyda certyfikat SSL
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Rzeczy do uzupełnienia przez Adriana
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Co | Gdzie w kodzie |
+|---|---|
+| Zdjęcie Adriana | zastąp placeholder w `Hero.tsx` i `About.tsx` — szukaj `TODO: Wymienić` |
+| Ceny pakietów | `src/components/sections/Pricing.tsx` — szukaj `TODO: Adrian uzupełnia` |
+| Lata doświadczenia i liczba firm | `src/components/sections/About.tsx` — szukaj `TODO: uzupełnić` |
+| URL LinkedIn | `src/components/Footer.tsx` — szukaj `TODO: uzupełnić` |
+| Resend API (formularz) | `src/components/sections/CTA.tsx` — szukaj `TODO: Podpiąć Resend` |
+| Google Analytics ID | `.env.local` → `NEXT_PUBLIC_GA_MEASUREMENT_ID` |
 
-## Deploy on Vercel
+## Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 15** (App Router, static export)
+- **TypeScript**
+- **Tailwind CSS v4** (paleta `brand-*` w `globals.css`)
+- **Framer Motion** (animacje fade-in, hover, float)
+- **shadcn/ui** (Button, Card, Input, Textarea, Badge)
+- **react-hook-form + zod** (walidacja formularza)
+- **sonner** (toast "Dziękuję, odezwę się w 24h")
+- **lucide-react** (ikony)
