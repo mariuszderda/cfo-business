@@ -50,7 +50,12 @@ export default function StickySection({ children, zIndex, isLast = false }: Prop
        * md:sticky  — enables the effect only on desktop
        * min-h-screen — each card occupies at least one viewport height,
        *               giving the scroll engine enough "room" to drive the animation
+       * data-scroll-target — anchor for Header navigation;
+       *   Header scrolls to this wrapper's offsetTop (static layout position)
+       *   instead of using scrollIntoView on the inner <section>, which breaks
+       *   because sticky elements are always considered "in view" by the browser.
        */
+      data-scroll-target
       className="relative md:sticky md:top-0 min-h-screen"
       style={{ zIndex }}
     >

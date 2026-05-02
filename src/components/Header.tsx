@@ -25,8 +25,35 @@ export default function Header() {
   /* Zamknij menu mobilne po kliknięciu linku */
   const handleNavClick = (href: string) => {
     setMenuOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    const el = document.querySelector(href) as HTMLElement | null;
+    if (!el) return;
+
+    const wrapper = el.closest("[data-scroll-target]") as HTMLElement | null;
+
+    if (!wrapper) {
+      // Brak sticky wrappera — zwykły scrollIntoView wystarczy
+      el.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+
+    /*
+     * offsetTop i getBoundingClientRect() są zawodne dla position:sticky —
+     * przeglądarka raportuje wizualną pozycję (0 gdy przyklejone), nie
+     * pozycję w flow dokumentu.
+     *
+     * Rozwiązanie: zsumuj offsetHeight wszystkich [data-scroll-target]
+     * wrapperów PRZED docelowym. Każdy wrapper ma min-h-screen w flow,
+     * więc suma = dokładna pozycja scrollY do której trzeba trafić.
+     */
+    const allWrappers = Array.from(
+      document.querySelectorAll("[data-scroll-target]")
+    );
+    const targetIndex = allWrappers.indexOf(wrapper);
+    const scrollTop = allWrappers
+      .slice(0, targetIndex)
+      .reduce((acc, w) => acc + (w as HTMLElement).offsetHeight, 0);
+
+    window.scrollTo({ top: scrollTop, behavior: "smooth" });
   };
 
   return (
