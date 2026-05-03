@@ -25,10 +25,10 @@ export default function Process() {
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <ParallaxY speed={-18} className="absolute top-[-3rem] right-[-4rem] w-72 h-72">
-          <div className="w-full h-full rounded-full opacity-[0.06]" style={{ background: "#0F2C4A" }} />
+          <div className="w-full h-full rounded-full opacity-[0.06]" style={{ background: "#00695C" }} />
         </ParallaxY>
         <ParallaxY speed={-12} className="absolute bottom-[-2rem] left-[-3rem] w-52 h-52">
-          <div className="w-full h-full rounded-full opacity-[0.08]" style={{ background: "#C9A961" }} />
+          <div className="w-full h-full rounded-full opacity-[0.08]" style={{ background: "#D4921A" }} />
         </ParallaxY>
       </div>
 

@@ -48,10 +48,10 @@ export default function About() {
       {/* Dekoracyjne blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <ParallaxY speed={-16} className="absolute top-[-3rem] right-[-3rem] w-64 h-64">
-          <div className="w-full h-full rounded-full opacity-[0.05]" style={{ background: "#C9A961" }} />
+          <div className="w-full h-full rounded-full opacity-[0.05]" style={{ background: "#D4921A" }} />
         </ParallaxY>
         <ParallaxY speed={-12} className="absolute bottom-[-2rem] left-[-3rem] w-52 h-52">
-          <div className="w-full h-full rounded-full opacity-[0.04]" style={{ background: "#0F2C4A" }} />
+          <div className="w-full h-full rounded-full opacity-[0.04]" style={{ background: "#00695C" }} />
         </ParallaxY>
       </div>
 
@@ -119,7 +119,7 @@ export default function About() {
               <motion.div style={{ y: photoY }} className="relative z-10">
                 {/* TODO: Wymienić na zdjęcie Adriana */}
                 <Image
-                  src="https://placehold.co/480x600/0F2C4A/C9A961?text=Adrian+Derda"
+                  src="https://placehold.co/480x600/00695C/D4921A?text=Adrian+Derda"
                   alt="Adrian Derda — Zewnętrzny Dyrektor Finansowy"
                   width={480}
                   height={600}

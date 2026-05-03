@@ -17,10 +17,10 @@ export default function Diagnostic() {
       {/* Blobs w izolowanym wrapperze — overflow-hidden tu, nie na sekcji */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <ParallaxY speed={-14} className="absolute top-10 right-[-4rem] w-64 h-64">
-          <div className="w-full h-full rounded-full opacity-[0.07]" style={{ background: "#C9A961" }} />
+          <div className="w-full h-full rounded-full opacity-[0.07]" style={{ background: "#D4921A" }} />
         </ParallaxY>
         <ParallaxY speed={-10} className="absolute bottom-0 left-[-3rem] w-48 h-48">
-          <div className="w-full h-full rounded-full opacity-[0.05]" style={{ background: "#0F2C4A" }} />
+          <div className="w-full h-full rounded-full opacity-[0.05]" style={{ background: "#00695C" }} />
         </ParallaxY>
       </div>
 

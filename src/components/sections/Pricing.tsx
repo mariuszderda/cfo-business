@@ -52,10 +52,10 @@ export default function Pricing() {
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <ParallaxY speed={-14} className="absolute top-10 left-[-5rem] w-80 h-80">
-          <div className="w-full h-full rounded-full opacity-[0.05]" style={{ background: "#C9A961" }} />
+          <div className="w-full h-full rounded-full opacity-[0.05]" style={{ background: "#D4921A" }} />
         </ParallaxY>
         <ParallaxY speed={-10} className="absolute bottom-10 right-[-4rem] w-56 h-56">
-          <div className="w-full h-full rounded-full opacity-[0.04]" style={{ background: "#0F2C4A" }} />
+          <div className="w-full h-full rounded-full opacity-[0.04]" style={{ background: "#00695C" }} />
         </ParallaxY>
       </div>
 
