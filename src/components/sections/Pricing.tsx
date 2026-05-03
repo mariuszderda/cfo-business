@@ -52,10 +52,10 @@ export default function Pricing() {
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <ParallaxY speed={-14} className="absolute top-10 left-[-5rem] w-80 h-80">
-          <div className="w-full h-full rounded-full opacity-[0.05]" style={{ background: "#D4921A" }} />
+          <div className="w-full h-full rounded-full opacity-[0.05]" style={{ background: "#C8A96E" }} />
         </ParallaxY>
         <ParallaxY speed={-10} className="absolute bottom-10 right-[-4rem] w-56 h-56">
-          <div className="w-full h-full rounded-full opacity-[0.04]" style={{ background: "#00695C" }} />
+          <div className="w-full h-full rounded-full opacity-[0.04]" style={{ background: "#1E2228" }} />
         </ParallaxY>
       </div>
 
@@ -101,7 +101,7 @@ export default function Pricing() {
                 {/* Badge */}
                 {plan.badge && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="inline-block bg-brand-accent text-brand-primary text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap shadow-sm">
+                    <span className="inline-block bg-brand-accent text-brand-cream text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap shadow-sm">
                       {plan.badge}
                     </span>
                   </div>
@@ -139,7 +139,7 @@ export default function Pricing() {
                   {/* CTA */}
                   <a
                     href="#cta"
-                    className="mt-4 inline-flex justify-center items-center gap-1 w-full px-5 py-3 rounded-md bg-brand-accent text-brand-primary font-semibold text-sm hover:bg-brand-accent-hover transition-colors duration-200"
+                    className="mt-4 inline-flex justify-center items-center gap-1 w-full px-5 py-3 rounded-md bg-brand-accent text-brand-cream font-semibold text-sm hover:bg-brand-accent-hover transition-colors duration-200"
                   >
                     Porozmawiajmy →
                   </a>

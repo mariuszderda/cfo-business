@@ -50,10 +50,10 @@ export default function Features() {
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <ParallaxY speed={-16} className="absolute top-0 left-[-5rem] w-80 h-80">
-          <div className="w-full h-full rounded-full opacity-[0.04]" style={{ background: "#00695C" }} />
+          <div className="w-full h-full rounded-full opacity-[0.04]" style={{ background: "#1E2228" }} />
         </ParallaxY>
         <ParallaxY speed={-12} className="absolute bottom-10 right-[-4rem] w-56 h-56">
-          <div className="w-full h-full rounded-full opacity-[0.06]" style={{ background: "#D4921A" }} />
+          <div className="w-full h-full rounded-full opacity-[0.06]" style={{ background: "#C8A96E" }} />
         </ParallaxY>
       </div>
 

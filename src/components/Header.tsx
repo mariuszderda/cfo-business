@@ -106,7 +106,7 @@ export default function Header() {
           <a
             href="#cta"
             onClick={(e) => { e.preventDefault(); handleNavClick("#cta"); }}
-            className="hidden md:inline-flex items-center gap-1 px-5 py-2.5 rounded-md bg-brand-accent text-brand-primary font-semibold text-sm hover:bg-brand-accent-hover transition-colors duration-200"
+            className="hidden md:inline-flex items-center gap-1 px-5 py-2.5 rounded-md bg-brand-accent text-brand-cream font-semibold text-sm hover:bg-brand-accent-hover transition-colors duration-200"
           >
             Umów bezpłatną rozmowę →
           </a>
@@ -140,7 +140,7 @@ export default function Header() {
             <a
               href="#cta"
               onClick={(e) => { e.preventDefault(); handleNavClick("#cta"); }}
-              className="mt-3 inline-flex justify-center items-center gap-1 px-5 py-3 rounded-md bg-brand-accent text-brand-primary font-semibold text-sm hover:bg-brand-accent-hover transition-colors"
+              className="mt-3 inline-flex justify-center items-center gap-1 px-5 py-3 rounded-md bg-brand-accent text-brand-cream font-semibold text-sm hover:bg-brand-accent-hover transition-colors"
             >
               Umów bezpłatną rozmowę →
             </a>

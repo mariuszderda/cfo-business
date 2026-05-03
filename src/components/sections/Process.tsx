@@ -25,10 +25,10 @@ export default function Process() {
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <ParallaxY speed={-18} className="absolute top-[-3rem] right-[-4rem] w-72 h-72">
-          <div className="w-full h-full rounded-full opacity-[0.06]" style={{ background: "#00695C" }} />
+          <div className="w-full h-full rounded-full opacity-[0.06]" style={{ background: "#1E2228" }} />
         </ParallaxY>
         <ParallaxY speed={-12} className="absolute bottom-[-2rem] left-[-3rem] w-52 h-52">
-          <div className="w-full h-full rounded-full opacity-[0.08]" style={{ background: "#D4921A" }} />
+          <div className="w-full h-full rounded-full opacity-[0.08]" style={{ background: "#C8A96E" }} />
         </ParallaxY>
       </div>
 
@@ -61,7 +61,7 @@ export default function Process() {
               <FadeInSection key={i} delay={i * 0.15}>
                 <div className="flex items-start gap-6 relative">
                   {/* Numer w dużym kółku */}
-                  <div className="flex-shrink-0 w-[4.5rem] h-[4.5rem] rounded-full bg-brand-accent text-brand-primary font-bold text-xl flex items-center justify-center shadow-md relative z-10">
+                  <div className="flex-shrink-0 w-[4.5rem] h-[4.5rem] rounded-full bg-brand-accent text-brand-cream font-bold text-xl flex items-center justify-center shadow-md relative z-10">
                     {i + 1}
                   </div>
 
@@ -84,7 +84,7 @@ export default function Process() {
         <FadeInSection delay={0.5} className="text-center mt-12">
           <a
             href="#cta"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-brand-accent text-brand-primary font-semibold text-base hover:bg-brand-accent-hover transition-colors duration-200"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-brand-accent text-brand-cream font-semibold text-base hover:bg-brand-accent-hover transition-colors duration-200"
           >
             Zacznij od bezpłatnej rozmowy →
           </a>

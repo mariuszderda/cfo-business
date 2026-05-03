@@ -17,10 +17,10 @@ export default function Diagnostic() {
       {/* Blobs w izolowanym wrapperze — overflow-hidden tu, nie na sekcji */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <ParallaxY speed={-14} className="absolute top-10 right-[-4rem] w-64 h-64">
-          <div className="w-full h-full rounded-full opacity-[0.07]" style={{ background: "#D4921A" }} />
+          <div className="w-full h-full rounded-full opacity-[0.07]" style={{ background: "#C8A96E" }} />
         </ParallaxY>
         <ParallaxY speed={-10} className="absolute bottom-0 left-[-3rem] w-48 h-48">
-          <div className="w-full h-full rounded-full opacity-[0.05]" style={{ background: "#00695C" }} />
+          <div className="w-full h-full rounded-full opacity-[0.05]" style={{ background: "#1E2228" }} />
         </ParallaxY>
       </div>
 
@@ -43,7 +43,7 @@ export default function Diagnostic() {
               <div className="flex items-start gap-5 bg-white rounded-xl p-5 border border-brand-border shadow-sm">
                 <span
                   aria-hidden
-                  className="flex-shrink-0 w-9 h-9 rounded-full bg-brand-accent text-brand-primary font-bold text-sm flex items-center justify-center"
+                  className="flex-shrink-0 w-9 h-9 rounded-full bg-brand-accent text-brand-cream font-bold text-sm flex items-center justify-center"
                 >
                   {i + 1}
                 </span>

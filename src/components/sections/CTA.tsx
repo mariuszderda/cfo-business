@@ -44,14 +44,14 @@ export default function CTA() {
         <ParallaxY speed={-18} className="absolute top-[-4rem] right-[-5rem] w-80 h-80">
           <div
             className="w-full h-full rounded-full border border-brand-accent/10"
-            style={{ boxShadow: "0 0 80px 20px rgba(212,146,26,0.06)" }}
+            style={{ boxShadow: "0 0 80px 20px rgba(200,169,110,0.06)" }}
           />
         </ParallaxY>
         <ParallaxY speed={-14} className="absolute top-[10%] right-[5%] w-48 h-48">
           <div className="w-full h-full rounded-full border border-brand-accent/20 opacity-40" />
         </ParallaxY>
         <ParallaxY speed={-22} className="absolute bottom-[-3rem] left-[-4rem] w-72 h-72">
-          <div className="w-full h-full rounded-full opacity-[0.08]" style={{ background: "#D4921A" }} />
+          <div className="w-full h-full rounded-full opacity-[0.08]" style={{ background: "#C8A96E" }} />
         </ParallaxY>
         <ParallaxY speed={-12} className="absolute bottom-[15%] left-[8%] w-32 h-32">
           <div className="w-full h-full rounded-full border border-white/5" />
@@ -129,7 +129,7 @@ export default function CTA() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="mt-2 w-full sm:w-auto sm:self-center inline-flex justify-center items-center gap-2 px-10 py-3.5 rounded-md bg-brand-accent text-brand-primary font-semibold text-base hover:bg-brand-accent-hover disabled:opacity-60 disabled:cursor-not-allowed transition-colors duration-200"
+              className="mt-2 w-full sm:w-auto sm:self-center inline-flex justify-center items-center gap-2 px-10 py-3.5 rounded-md bg-brand-accent text-brand-cream font-semibold text-base hover:bg-brand-accent-hover disabled:opacity-60 disabled:cursor-not-allowed transition-colors duration-200"
             >
               {isSubmitting ? "Wysyłanie…" : "Wyślij wiadomość →"}
             </button>

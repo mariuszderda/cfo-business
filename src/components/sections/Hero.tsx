@@ -26,7 +26,7 @@ export default function Hero() {
         style={{ y: blobY1, opacity: blobOpacity }}
         className="absolute top-20 right-[5%] w-72 h-72 rounded-full pointer-events-none"
       >
-        <div className="w-full h-full rounded-full opacity-[0.06]" style={{ background: "#00695C" }} />
+        <div className="w-full h-full rounded-full opacity-[0.06]" style={{ background: "#1E2228" }} />
       </motion.div>
 
       <motion.div
@@ -34,15 +34,15 @@ export default function Hero() {
         style={{ y: blobY2, opacity: blobOpacity }}
         className="absolute bottom-20 right-[15%] w-40 h-40 rounded-full pointer-events-none"
       >
-        <div className="w-full h-full rounded-full opacity-[0.10]" style={{ background: "#D4921A" }} />
+        <div className="w-full h-full rounded-full opacity-[0.10]" style={{ background: "#C8A96E" }} />
       </motion.div>
 
       <motion.div
         aria-hidden
         style={{ y: blobY3, opacity: blobOpacity }}
-        className="absolute top-1/2 left-[-5%] w-56 h-56 rounded-full pointer-events-none"
+        className="absolute top-1/2 left-[5%] w-56 h-56 rounded-full pointer-events-none"
       >
-        <div className="w-full h-full rounded-full opacity-[0.04]" style={{ background: "#00695C" }} />
+        <div className="w-full h-full rounded-full opacity-[0.04]" style={{ background: "#1E2228" }} />
       </motion.div>
 
       {/* Dodatkowy mały złoty blob — górny lewy, szybki */}
@@ -51,7 +51,7 @@ export default function Hero() {
         style={{ y: blobY4, opacity: blobOpacity }}
         className="absolute top-32 left-[20%] w-20 h-20 rounded-full pointer-events-none"
       >
-        <div className="w-full h-full rounded-full opacity-[0.06]" style={{ background: "#D4921A" }} />
+        <div className="w-full h-full rounded-full opacity-[0.06]" style={{ background: "#C8A96E" }} />
       </motion.div>
 
       </div>{/* /blobs wrapper */}
@@ -105,7 +105,7 @@ export default function Hero() {
                   e.preventDefault();
                   document.querySelector("#cta")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-brand-accent text-brand-primary font-semibold text-base hover:bg-brand-accent-hover transition-colors duration-200 shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-brand-accent text-brand-cream font-semibold text-base hover:bg-brand-accent-hover transition-colors duration-200 shadow-sm"
               >
                 Porozmawiajmy o Twojej firmie →
               </a>
@@ -154,7 +154,7 @@ export default function Hero() {
                   className="relative z-10"
                 >
                   <Image
-                    src="https://placehold.co/540x680/00695C/D4921A?text=Adrian+Derda"
+                    src="https://placehold.co/540x680/1E2228/C8A96E?text=Adrian+Derda"
                     alt="Adrian Derda — Zewnętrzny Dyrektor Finansowy"
                     width={540}
                     height={680}
