@@ -119,7 +119,7 @@ export default function About() {
               <motion.div style={{ y: photoY }} className="relative z-10">
                 {/* TODO: Wymienić na zdjęcie Adriana */}
                 <Image
-                  src="https://placehold.co/480x600/1E2228/C8A96E?text=Adrian+Derda"
+                  src="/Adrian-Derda-Photo-2.jpg"
                   alt="Adrian Derda — Zewnętrzny Dyrektor Finansowy"
                   width={480}
                   height={600}

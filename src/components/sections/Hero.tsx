@@ -154,7 +154,7 @@ export default function Hero() {
                   className="relative z-10"
                 >
                   <Image
-                    src="https://placehold.co/540x680/1E2228/C8A96E?text=Adrian+Derda"
+                    src="/Adrian-Derda-Photo-1.jpg"
                     alt="Adrian Derda — Zewnętrzny Dyrektor Finansowy"
                     width={540}
                     height={680}
