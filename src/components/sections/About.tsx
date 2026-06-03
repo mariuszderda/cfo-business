@@ -22,13 +22,13 @@ const CREDIBILITY = [
   },
   {
     icon: Briefcase,
-    value: "X lat",
+    value: "10+ lat",
     label: "w finansach korporacyjnych", // TODO: uzupełnić
   },
   {
     icon: Users,
-    value: "X firm",
-    label: "we współpracy", // TODO: uzupełnić
+    value: "100M+ zł",
+    label: "Projekty CAPEX", // TODO: uzupełnić
   },
 ];
 

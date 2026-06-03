@@ -7,40 +7,40 @@ import ParallaxY from "@/components/ui/ParallaxY";
 
 const PLANS = [
   {
-    name: "START",
-    tagline: "Dla firm stawiających pierwsze kroki z CFO",
-    price: "od X XXX zł netto / miesiąc", // TODO: Adrian uzupełnia cenę
+    name: "PROJEKT",
+    tagline: "Jednorazowa współpraca przy konkretnym zadaniu. Dla firm z jasno zdefiniowanym problemem do rozwiązania. ",
     features: [
-      "Diagnoza finansowa",
-      "Miesięczny raport zarządczy",
-      "1 spotkanie / miesiąc",
-      "Konsultacje e-mail",
+      "Diagnoza finansowa firmy",
+      "Budżet lub model finansowy",
+      "Przygotowanie do rozmów z bankiem",
+      "Analiza rentowności produktów / klientów",
+      "Restrukturyzacja kosztów"
     ],
     featured: false,
   },
   {
-    name: "STANDARD",
-    tagline: "Dla rozwijających się firm potrzebujących regularnego wsparcia",
-    price: "od X XXX zł netto / miesiąc", // TODO: Adrian uzupełnia cenę
+    name: "Stała współpraca",
+    tagline: "Regularny CFO po Twojej stronie. Dla firm, które chcą mieć finanse pod kontrolą na co dzień, nie tylko przy kryzysie.",
     badge: "⭐ Najczęściej wybierany",
     features: [
-      "Wszystko ze START",
-      "Budżetowanie i prognozowanie",
-      "Analiza rentowności",
-      "2 spotkania / miesiąc",
-      "Wsparcie w negocjacjach z bankiem",
+      "Miesięczne spotkania i raportowanie zarządcze",
+      "Budżetowanie i prognozowanie gotówki",
+      "Analiza rentowności — bieżąca i historyczna",
+      "Controlling operacyjny",
+      "Wsparcie w decyzjach inwestycyjnych",
+      "Bieżące konsultacje e-mail / telefon"
     ],
     featured: true,
   },
   {
-    name: "PREMIUM",
-    tagline: "Pełna obecność CFO w firmie",
-    price: "od X XXX zł netto / miesiąc", // TODO: Adrian uzupełnia cenę
+    name: "Intensywna współpraca",
+    tagline: "Pełna obecność CFO w firmie. Dla firm w fazie dynamicznego wzrostu, przed inwestycją lub w trakcie transformacji. ",
     features: [
-      "Wszystko ze STANDARD",
-      "Controlling operacyjny",
+      "Wszystko ze stałej współpracy",
+      "Udział w spotkaniach zarządu",
+      "Przygotowanie do sprzedaży firmy lub inwestora",
       "Nieograniczone konsultacje",
-      "Obecność na spotkaniach zarządu",
+      "Budowa wewnętrznego działu finansowego"
     ],
     featured: false,
   },
@@ -119,7 +119,7 @@ export default function Pricing() {
 
                   {/* Cena */}
                   <div className="border-t border-brand-border pt-5">
-                    <p className="text-brand-primary font-bold text-base">{plan.price}</p>
+                  {/*  <p className="text-brand-primary font-bold text-base">{plan.price}</p>*/}
                   </div>
 
                   {/* Lista cech */}
