@@ -17,6 +17,7 @@ const PLANS = [
       "Restrukturyzacja kosztów"
     ],
     featured: false,
+    buttonText: "Zapytaj o zakres",
   },
   {
     name: "Stała współpraca",
@@ -31,6 +32,7 @@ const PLANS = [
       "Bieżące konsultacje e-mail / telefon"
     ],
     featured: true,
+    buttonText: "Umów bezpłatną rozmowę",
   },
   {
     name: "Intensywna współpraca",
@@ -43,6 +45,7 @@ const PLANS = [
       "Budowa wewnętrznego działu finansowego"
     ],
     featured: false,
+    buttonText: "Zapytaj o zakres",
   },
 ];
 
@@ -141,7 +144,7 @@ export default function Pricing() {
                     href="#cta"
                     className="mt-4 inline-flex justify-center items-center gap-1 w-full px-5 py-3 rounded-md bg-brand-accent text-brand-cream font-semibold text-sm hover:bg-brand-accent-hover transition-colors duration-200"
                   >
-                    Porozmawiajmy →
+                    {plan.buttonText} →
                   </a>
                 </div>
               </motion.div>
