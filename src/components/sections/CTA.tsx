@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
@@ -154,6 +155,14 @@ export default function CTA() {
             >
               {isSubmitting ? "Wysyłanie…" : "Wyślij wiadomość →"}
             </button>
+            <p className="text-xs text-text-muted text-center leading-relaxed">
+              Administratorem danych jest Adrian Derda. Dane z formularza przetwarzam
+              wyłącznie w celu odpowiedzi na zapytanie. Szczegóły w{" "}
+              <Link href="/polityka-prywatnosci" className="underline underline-offset-2 hover:text-white">
+                polityce prywatności
+              </Link>
+              .
+            </p>
           </form>
         </FadeInSection>
 
