@@ -23,8 +23,8 @@ export async function sendContact(input: ContactData, token: string) {
   }
 
   const { error } = await resend.emails.send({
-    from: "Formularz <formularz@adrianderda.pl>",
-    to: "adrian@adrianderda.pl",
+    from: "Formularz <kontakt@adrianderda.pl>",
+    to: "kontakt@adrianderda.pl",
     replyTo: email,
     subject: `Zapytanie ze strony: ${name}`,
     text: `${name} <${email}>\n\n${message}`,

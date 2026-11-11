@@ -53,7 +53,7 @@ export default function CTA() {
       toast.success("Dziękuję, odezwę się w 24h!");
       reset();
     } catch {
-      toast.error("Nie udało się wysłać. Napisz na adrian@adrianderda.pl.");
+      toast.error("Nie udało się wysłać. Napisz na kontakt@adrianderda.pl.");
     }
   };
 
