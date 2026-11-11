@@ -6,15 +6,24 @@ import { z } from "zod";
 import { toast } from "sonner";
 import FadeInSection from "@/components/ui/FadeInSection";
 import ParallaxY from "@/components/ui/ParallaxY";
+import Script from "next/script";
+import { contactSchema, type ContactData } from "@/lib/contactSchema";
+import { sendContact } from "@/app/actions/contact";
 
-/* TODO: Podpiąć Resend API + adrian@adrianderda.pl */
-const schema = z.object({
-  name: z.string().min(2, "Podaj imię i nazwisko"),
-  email: z.string().email("Nieprawidłowy adres e-mail"),
-  message: z.string().min(10, "Opisz krótko sytuację (min. 10 znaków)"),
-});
+const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!;
 
-type FormData = z.infer<typeof schema>;
+declare global {
+  interface Window { grecaptcha: any }
+}
+
+const getToken = () =>
+  new Promise<string>((resolve, reject) => {
+    window.grecaptcha.ready(() => {
+      window.grecaptcha.execute(SITE_KEY, { action: "contact" }).then(resolve, reject);
+    });
+  });
+
+type FormData = z.infer<typeof contactSchema>;
 
 const inputClass =
   "w-full px-4 py-3 rounded-md bg-white border border-brand-border text-text-primary placeholder:text-text-muted text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition";
@@ -27,18 +36,23 @@ export default function CTA() {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
+  } = useForm<ContactData>({ resolver: zodResolver(contactSchema) });
 
-  const onSubmit = async (data: FormData) => {
-    /* Na razie: console.log + toast — Resend API w drugiej iteracji */
-    console.log("Formularz kontaktowy:", data);
-    await new Promise((r) => setTimeout(r, 400)); // symulacja wysyłki
-    toast.success("Dziękuję, odezwę się w 24h!");
-    reset();
+  const onSubmit = async (data: ContactData) => {
+    try {
+      const token = await getToken();
+      const res = await sendContact(data, token);
+      if (!res.ok) throw new Error("send failed");
+      toast.success("Dziękuję, odezwę się w 24h!");
+      reset();
+    } catch {
+      toast.error("Nie udało się wysłać. Napisz na adrian@adrianderda.pl.");
+    }
   };
 
   return (
     <section id="cta" className="relative bg-brand-primary min-h-screen flex flex-col justify-center">
+      <Script src={`https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`} strategy="lazyOnload" />
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <ParallaxY speed={-18} className="absolute top-[-4rem] right-[-5rem] w-80 h-80">

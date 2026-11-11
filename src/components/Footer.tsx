@@ -14,8 +14,8 @@ const SOCIAL = [
   {
     icon: Mail,
     label: "E-mail",
-    href: "mailto:adrian@adrianderda.pl",
-    text: "adrian@adrianderda.pl",
+    href: "mailto:kontakt@adrianderda.pl",
+    text: "kontakt@adrianderda.pl",
   },
   {
     icon: PlaySquare,
@@ -26,7 +26,7 @@ const SOCIAL = [
   {
     icon: Link2,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/adrianderda", // TODO: uzupełnić poprawny URL LinkedIn
+    href: "https://linkedin.com/in/adrian-derda-325367171", // TODO: uzupełnić poprawny URL LinkedIn
     text: "Adrian Derda",
   },
 ];
