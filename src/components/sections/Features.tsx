@@ -8,39 +8,39 @@ import ParallaxY from "@/components/ui/ParallaxY";
 const FEATURES = [
   {
     icon: Search,
-    title: "Wiesz, gdzie jest Twój zysk",
+    title: "Wiesz, gdzie zarabiasz",
     description:
-      "Nie tylko co pokazuje wynik netto — ale które produkty, klienci i kanały sprzedaży naprawdę Ci płacą. I które tylko wyglądają na rentowne.",
+      "Widzisz marżę na produktach i klientach. Łatwiej zdecydować, co rozwijać.",
   },
   {
     icon: Wallet,
-    title: "Masz kontrolę nad gotówką",
+    title: "Widzisz gotówkę z wyprzedzeniem.",
     description:
-      "Koniec z niespodziankami na koncie. Wiesz z wyprzedzeniem kiedy, skąd i ile wpłynie — i możesz planować zamiast reagować.",
+      "Prognoza na kilka miesięcy do przodu pokazuje, kiedy może zrobić się ciasno.",
   },
   {
     icon: BarChart3,
-    title: "Podejmujesz decyzje na podstawie danych",
+    title: "Decyzje opierasz na liczbach",
     description:
-      "Inwestycja, zatrudnienie, nowy produkt — każda decyzja ma teraz swoje liczby. Nie zgadujemy. Liczymy.",
+      "Zanim kupisz maszynę albo podniesiesz ceny, sprawdzamy, co to zmieni w wyniku.",
   },
   {
     icon: Handshake,
-    title: "Masz partnera, nie dostawcę",
+    title: "Masz kogo zapytać",
     description:
-      "Nie dostajesz raportów do szuflady. Dostajesz kogoś, kto siada z Tobą, wyjaśnia co widzą liczby i mówi wprost, co rekomenduje.",
+      "Kiedy coś Cię niepokoi w liczbach, piszesz albo dzwonisz. Odpowiadam konkretnie.",
   },
   {
     icon: Target,
-    title: "Wiesz dla kogo pracujesz",
+    title: "Wiesz, którzy klienci się opłacają",
     description:
-      "Który klient jest naprawdę rentowny? Który tylko duży? Razem określimy, gdzie warto inwestować czas i zasoby.",
+      "Część klientów robi obrót, część robi zysk. Warto wiedzieć, która to która.",
   },
   {
     icon: Shield,
-    title: "Finansowa pewność w trudnych momentach",
+    title: "Rozmowa z bankiem bez stresu",
     description:
-      "Negocjacje z bankiem, sezon słabszy niż zakładany, nowy wspólnik — masz obok siebie kogoś, kto wie co robi.",
+      "Prognozy i scenariusze masz gotowe, zanim bank o nie poprosi.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function Features() {
             <span className="h-0.5 w-8 bg-brand-accent" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-primary max-w-2xl mx-auto leading-tight">
-            Co się zmienia, gdy masz kogoś od finansów po swojej stronie
+            Co się zmienia, kiedy ktoś pilnuje z Tobą liczb
           </h2>
         </FadeInSection>
 

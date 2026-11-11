@@ -66,7 +66,7 @@ export default function CTA() {
             Zacznijmy od rozmowy
           </h2>
           <p className="text-text-muted text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-            Pierwsze spotkanie jest bezpłatne. Powiedz mi w 2 zdaniach, co dzieje się u Ciebie w firmie — resztą zajmę się ja.
+            Pierwsza rozmowa jest bezpłatna. Napisz w dwóch, trzech zdaniach, czym zajmuje się firma i co najbardziej Cię męczy w finansach. Odpiszę i umówimy termin.
           </p>
         </FadeInSection>
 
@@ -117,7 +117,7 @@ export default function CTA() {
               <textarea
                 id="message"
                 rows={4}
-                placeholder="Np. Prowadzimy firmę produkcyjną, 15 mln przychodu, mam problem z rentownością i nie wiem gdzie szukać..."
+                placeholder="np. produkcja, 30 mln zł obrotu, sprzedaż rośnie, a gotówki brakuje"
                 {...register("message")}
                 className={`${inputClass} resize-none`}
                 aria-invalid={!!errors.message}

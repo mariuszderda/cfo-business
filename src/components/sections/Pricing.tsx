@@ -8,44 +8,30 @@ import ParallaxY from "@/components/ui/ParallaxY";
 const PLANS = [
   {
     name: "PROJEKT",
-    tagline: "Jednorazowa współpraca przy konkretnym zadaniu. Dla firm z jasno zdefiniowanym problemem do rozwiązania. ",
+    tagline: "Jednorazowo, z konkretnym celem.",
     features: [
-      "Diagnoza finansowa firmy",
-      "Budżet lub model finansowy",
-      "Przygotowanie do rozmów z bankiem",
-      "Analiza rentowności produktów / klientów",
-      "Restrukturyzacja kosztów"
+      "Przegląd finansów firmy",
+      "Budżet albo model finansowy",
+      "Przygotowanie do rozmowy z bankiem",
+      "Rentowność produktów i klientów",
+      "Przegląd kosztów"
     ],
     featured: false,
     buttonText: "Zapytaj o zakres",
   },
   {
-    name: "Stała współpraca",
-    tagline: "Regularny CFO po Twojej stronie. Dla firm, które chcą mieć finanse pod kontrolą na co dzień, nie tylko przy kryzysie.",
-    badge: "⭐ Najczęściej wybierany",
+    name: "Współpraca co miesiąc",
+    tagline: "Regularnie, raz w miesiącu przy liczbach.",
+    badge: "",
     features: [
-      "Miesięczne spotkania i raportowanie zarządcze",
-      "Budżetowanie i prognozowanie gotówki",
-      "Analiza rentowności — bieżąca i historyczna",
-      "Controlling operacyjny",
-      "Wsparcie w decyzjach inwestycyjnych",
-      "Bieżące konsultacje e-mail / telefon"
+      "Spotkanie raz w miesiącu i raport dla zarządu",
+      "Budżet i prognoza gotówki",
+      "Rentowność produktów i klientów",
+      "Wsparcie przy decyzjach inwestycyjnych",
+      "Kontakt mailowy między spotkaniami",
     ],
     featured: true,
     buttonText: "Umów bezpłatną rozmowę",
-  },
-  {
-    name: "Intensywna współpraca",
-    tagline: "Pełna obecność CFO w firmie. Dla firm w fazie dynamicznego wzrostu, przed inwestycją lub w trakcie transformacji. ",
-    features: [
-      "Wszystko ze stałej współpracy",
-      "Udział w spotkaniach zarządu",
-      "Przygotowanie do sprzedaży firmy lub inwestora",
-      "Nieograniczone konsultacje",
-      "Budowa wewnętrznego działu finansowego"
-    ],
-    featured: false,
-    buttonText: "Zapytaj o zakres",
   },
 ];
 
@@ -85,7 +71,7 @@ export default function Pricing() {
         </FadeInSection>
 
         {/* Karty pakietów */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           {PLANS.map((plan, i) => (
             <FadeInSection key={plan.name} delay={i * 0.12}>
               <motion.div

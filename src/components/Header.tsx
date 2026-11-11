@@ -72,7 +72,7 @@ export default function Header() {
             href="#"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             className="flex flex-col leading-tight"
-            aria-label="Adrian Derda — Zewnętrzny Dyrektor Finansowy"
+            aria-label="Adrian Derda — Contrilling i finanse dla firm"
           >
             <span
               className={`font-bold text-lg tracking-tight transition-colors duration-300 ${
@@ -82,7 +82,7 @@ export default function Header() {
               Adrian Derda
             </span>
             <span className="text-xs text-text-secondary hidden sm:block">
-              Zewnętrzny Dyrektor Finansowy
+              Controlling i finanse dla firm
             </span>
           </a>
 

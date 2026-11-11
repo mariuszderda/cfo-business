@@ -8,6 +8,8 @@ const NAV_LINKS = [
   { label: "Kontakt", href: "#cta" },
 ];
 
+const year = new Date().getFullYear();
+
 const SOCIAL = [
   {
     icon: Mail,
@@ -43,7 +45,7 @@ export default function Footer() {
               Adrian Derda
             </span>
             <p className="text-text-muted text-sm leading-relaxed">
-              Zewnętrzny Dyrektor Finansowy. Wspieram właścicieli firm w podejmowaniu lepszych decyzji finansowych.
+              Controlling i finanse dla firm. Wspieram właścicieli firm w podejmowaniu lepszych decyzji finansowych.
             </p>
           </div>
 
@@ -101,7 +103,7 @@ export default function Footer() {
       <div className="border-t border-[#2A3038]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-text-muted text-xs">
-            © 2025 Adrian Derda. Wszelkie prawa zastrzeżone.
+            © {year} Adrian Derda. Wszelkie prawa zastrzeżone.
           </p>
           <a
             href="#"

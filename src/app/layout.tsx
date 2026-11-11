@@ -9,21 +9,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Adrian Derda — Zewnętrzny Dyrektor Finansowy",
+  title: "Adrian Derda — Controlling i finanse dla firm",
   description:
-    "Wspieram właścicieli firm w podejmowaniu lepszych decyzji finansowych. Zewnętrzny CFO dla firm 10–100 mln obrotów.",
+    "Kontroler finansowy z ponad 10-letnim doświadczeniem. Pomagam firmom policzyć marże, koszty i gotówkę. Pierwsza rozmowa jest bezpłatna.",
   keywords: [
+    "controlling i finanse dla firm",
     "zewnętrzny dyrektor finansowy",
     "CFO na zlecenie",
-    "kontroling",
+    "controlling",
     "finanse dla firm",
     "Adrian Derda",
   ],
   authors: [{ name: "Adrian Derda" }],
   openGraph: {
-    title: "Adrian Derda — Zewnętrzny Dyrektor Finansowy",
+    title: "Adrian Derda — Controlling i finanse dla firm",
     description:
-      "Wspieram właścicieli firm w podejmowaniu lepszych decyzji finansowych.",
+      "Kontroler finansowy z ponad 10-letnim doświadczeniem. Pomagam firmom policzyć marże, koszty i gotówkę. Pierwsza rozmowa jest bezpłatna.",
     url: "https://adrianderda.pl",
     siteName: "Adrian Derda",
     locale: "pl_PL",
@@ -33,15 +34,15 @@ export const metadata: Metadata = {
         url: "https://adrianderda.pl/og-image.jpg", // TODO: dodać właściwy plik OG image
         width: 1200,
         height: 630,
-        alt: "Adrian Derda — Zewnętrzny Dyrektor Finansowy",
+        alt: "Adrian Derda — Controlling i finanse dla firm",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adrian Derda — Zewnętrzny Dyrektor Finansowy",
+    title: "Adrian Derda — Controlling i finanse dla firm",
     description:
-      "Wspieram właścicieli firm w podejmowaniu lepszych decyzji finansowych.",
+      "Kontroler finansowy z ponad 10-letnim doświadczeniem. Pomagam firmom policzyć marże, koszty i gotówkę. Pierwsza rozmowa jest bezpłatna.",
   },
   robots: {
     index: true,

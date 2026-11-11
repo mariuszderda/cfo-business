@@ -2,12 +2,11 @@ import FadeInSection from "@/components/ui/FadeInSection";
 import ParallaxY from "@/components/ui/ParallaxY";
 
 const QUESTIONS = [
-  "Masz przychody, ale nie wiesz czy firma naprawdę zarabia?",
-  "Czy wiesz, które produkty lub usługi zarabiają dla Ciebie, a które tylko generują obrót?",
-  "Czy masz plan finansowy na najbliższe 12 miesięcy — z prognozą gotówki?",
-  "Czujesz, że gdzieś uciekają pieniądze — ale nie wiesz gdzie?",
-  "Bank lub inwestor prosi o prognozy finansowe, a Ty nie wiesz od czego zacząć?",
-  "Chciałbyś mieć kogoś, kto patrzy na firmę z dystansu i mówi wprost, co wymaga naprawy?",
+  "Sprzedaż rośnie, a na koncie jakoś tego nie widać.",
+  "Nie wiesz do końca, na których produktach zarabiasz, a na których dokładasz.",
+  "Pieniądze na najbliższe miesiące planujesz raczej w głowie niż w tabelce.",
+  "Masz wrażenie, że gdzieś ucieka kasa, ale trudno powiedzieć gdzie.",
+  "Bank poprosił o prognozę i zrobiło się nerwowo."
 ];
 
 export default function Diagnostic() {
@@ -29,10 +28,10 @@ export default function Diagnostic() {
         {/* Nagłówek */}
         <FadeInSection className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-primary mb-4">
-            Czy to brzmi znajomo?
+            Brzmi znajomo?
           </h2>
           <p className="text-text-secondary text-base sm:text-lg max-w-xl mx-auto">
-            Jeśli odpowiadasz &bdquo;tak&rdquo; na choćby trzy z tych pytań — czytaj dalej.
+            Jeśli rozpoznajesz swoją firmę w kilku z tych zdań, warto pogadać.
           </p>
         </FadeInSection>
 
@@ -56,9 +55,9 @@ export default function Diagnostic() {
         {/* Zdanie zamykające */}
         <FadeInSection delay={0.7} className="mt-10">
           <p className="text-center text-text-secondary text-base sm:text-lg leading-relaxed border-t border-brand-border pt-8">
-            Nie jesteś w tym sam. Większość właścicieli firm{" "}
-            <span className="font-semibold text-brand-primary">10–100 mln obrotów</span>,
-            z którymi rozmawiam, zmaga się dokładnie z tym samym.
+            Większość firm tej wielkości ma te same {" "}
+            <span className="font-semibold text-brand-primary">pytania</span>.
+            Na szczęście da się na nie odpowiedzieć liczbami.
           </p>
         </FadeInSection>
 

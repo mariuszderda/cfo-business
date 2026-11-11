@@ -5,17 +5,17 @@ const STEPS = [
   {
     title: "Rozmowa (bezpłatna)",
     description:
-      "Opowiadasz mi o firmie. Słucham. Pytam o to, o co nikt do tej pory nie pytał. Po 45 minutach oboje wiemy, czy i jak mogę pomóc.",
+      "Około 45 minut. Opowiadasz o firmie, ja dopytuję. Po rozmowie wiesz, czy mogę Ci pomóc.",
   },
   {
-    title: "Diagnoza finansowa",
+    title: "Przegląd liczb",
     description:
-      "Wchodzę w liczby Twojej firmy. Buduję obraz: gdzie jesteś, gdzie tracisz, co możesz zyskać. Bez upiększania.",
+      "Patrzę na wyniki, koszty i pieniądze na koncie. Dostajesz konkretną listę: co poprawić najpierw.",
   },
   {
-    title: "Stałe wsparcie lub projekt",
+    title: "Dalsza współpraca",
     description:
-      "Działamy dalej w formie, która pasuje do Twojej firmy — jako stały zewnętrzny CFO lub przy konkretnym projekcie: budżet, model, restrukturyzacja, przygotowanie do finansowania.",
+      "Jeden projekt, na przykład budżet albo analiza rentowności, albo regularne spotkania co miesiąc. Jak wolisz.",
   },
 ];
 

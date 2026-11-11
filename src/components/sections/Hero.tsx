@@ -71,7 +71,7 @@ export default function Hero() {
             >
               <span className="h-0.5 w-8 bg-brand-accent" />
               <span className="text-xs font-semibold uppercase tracking-widest text-brand-accent">
-                Zewnętrzny Dyrektor Finansowy
+                Controlling i finanse dla firm
               </span>
             </motion.div>
 
@@ -81,7 +81,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-primary leading-tight"
             >
-              Prowadzisz firmę. Ale czy wiesz, co naprawdę dzieje się z Twoimi pieniędzmi?
+              Firma rośnie. Wiesz, na czym naprawdę zarabia?
             </motion.h1>
 
             <motion.p
@@ -90,7 +90,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.35 }}
               className="text-base sm:text-lg text-text-secondary leading-relaxed max-w-lg"
             >
-              Jestem zewnętrznym dyrektorem finansowym dla firm, które wyrosły z prowadzenia finansów &bdquo;na wyczucie&rdquo;.
+              Na co dzień jestem kontrolerem finansowym w dużej firmie produkcyjnej. Od ponad 10 lat liczę koszty, marże i budżety. Teraz pomagam też mniejszym firmom, które wyrosły z finansów prowadzonych na wyczucie. Pracuję projektowo, z kilkoma firmami naraz, więc każda dostaje moją pełną uwagę.
             </motion.p>
 
             <motion.div
@@ -118,9 +118,9 @@ export default function Hero() {
               className="flex flex-wrap gap-4 pt-4 border-t border-brand-border"
             >
               {[
-                { value: "10–100 mln", label: "obrotów firm" },
+                { value: "10 lat", label: "Ponad 10 lat w controllingu" },
                 { value: "YouTube", label: "@DerdaAnaliza" },
-                { value: "Bez etatu", label: "pełne zaangażowanie" },
+                { value: "Kilka firm na raz", label: "nie kilkadziesiąt" },
               ].map((item) => (
                 <div key={item.label} className="flex flex-col">
                   <span className="text-sm font-bold text-brand-primary">{item.value}</span>
@@ -155,7 +155,7 @@ export default function Hero() {
                 >
                   <Image
                     src="/Adrian-Derda-Photo-1.jpg"
-                    alt="Adrian Derda — Zewnętrzny Dyrektor Finansowy"
+                    alt="Adrian Derda — Controlling i finanse dla firm"
                     width={540}
                     height={680}
                     priority

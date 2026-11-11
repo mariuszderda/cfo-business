@@ -6,13 +6,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { PlaySquare, Briefcase, Users } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import ParallaxY from "@/components/ui/ParallaxY";
-
-const PARAGRAPHS = [
-  "Przez lata pracowałem z finansami firm — od analizy danych, przez budowanie modeli, po controlling i raportowanie zarządcze. Widziałem, co się dzieje, gdy właściciel firmy nie ma nikogo, kto przełoży liczby na decyzje.",
-  "Dlatego robię to, co robię: wchodzę do Twojej firmy jako zewnętrzny dyrektor finansowy — bez etatu, bez biurka, ale z pełnym zaangażowaniem. Mówię językiem liczb, ale tłumaczę je na Twój język: co kupić, co zmienić, skąd wziąć, czego unikać.",
-  "Prowadzę też kanał na YouTube, gdzie uczę analizy danych i controllingu — bo wierzę, że finansami można zarządzać prosto, jeśli ktoś pokaże jak.",
-];
-
 const CREDIBILITY = [
   {
     icon: PlaySquare,
@@ -31,6 +24,16 @@ const CREDIBILITY = [
     label: "Projekty CAPEX", // TODO: uzupełnić
   },
 ];
+
+const PARAGRAPHS = [
+  "Nazywam się Adrian Derda. Pracuję w finansach od ponad 10 lat, głównie w dużych grupach z branży górniczej, hutniczej i energetycznej. Robiłem budżety, raporty dla zarządów i kontroling inwestycji, w tym projektów za ponad 100 mln zł.",
+  "W dużej firmie wszystko jest policzone: jest MPK, marża na każdym produkcie i prognoza gotówki. W mniejszych firmach często tego brakuje, chociaż decyzje są tak samo ważne. Chcę to zmieniać, krok po kroku, z firmami, które naprawdę tego potrzebują.",
+  <>Na YouTube <a href="https://youtube.com/@DerdaAnaliza" target="_blank" rel="noopener noreferrer">(@DerdaAnaliza)</a> pokazuję, jak to robić u siebie. Na przykładach, bez teorii dla teorii.</>,
+];
+
+/*                        */
+
+
 
 export default function About() {
   /* Parallax zdjęcia — element-relative, bezpieczny bo target = sekcja */
@@ -68,7 +71,7 @@ export default function About() {
                 </span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-primary leading-tight">
-                Nie jestem kolejnym konsultantem z teczką pełną slajdów.
+                Liczę, zamiast robić slajdy.
               </h2>
             </FadeInSection>
 
@@ -120,7 +123,7 @@ export default function About() {
                 {/* TODO: Wymienić na zdjęcie Adriana */}
                 <Image
                   src="/Adrian-Derda-Photo-2.jpg"
-                  alt="Adrian Derda — Zewnętrzny Dyrektor Finansowy"
+                  alt="Adrian Derda — Controlling i finanse dla firm"
                   width={480}
                   height={600}
                   className="rounded-2xl object-cover shadow-xl max-h-[70vh] w-auto"
