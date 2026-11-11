@@ -22,8 +22,13 @@ declare global {
 
 const getToken = () =>
   new Promise<string>((resolve, reject) => {
+    if (!window.grecaptcha) return reject(new Error("reCAPTCHA not loaded"));
     window.grecaptcha.ready(() => {
-      window.grecaptcha.execute(SITE_KEY, { action: "contact" }).then(resolve, reject);
+      try {
+        window.grecaptcha.execute(SITE_KEY, { action: "contact" }).then(resolve, reject);
+      } catch (err) {
+        reject(err);
+      }
     });
   });
 
