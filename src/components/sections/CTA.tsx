@@ -2,7 +2,6 @@
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { toast } from "sonner";
 import FadeInSection from "@/components/ui/FadeInSection";
 import ParallaxY from "@/components/ui/ParallaxY";
@@ -13,7 +12,12 @@ import { sendContact } from "@/app/actions/contact";
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!;
 
 declare global {
-  interface Window { grecaptcha: any }
+  interface Window {
+    grecaptcha: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
 }
 
 const getToken = () =>
@@ -22,8 +26,6 @@ const getToken = () =>
       window.grecaptcha.execute(SITE_KEY, { action: "contact" }).then(resolve, reject);
     });
   });
-
-type FormData = z.infer<typeof contactSchema>;
 
 const inputClass =
   "w-full px-4 py-3 rounded-md bg-white border border-brand-border text-text-primary placeholder:text-text-muted text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition";
