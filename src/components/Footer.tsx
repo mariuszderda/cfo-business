@@ -1,4 +1,5 @@
 import { PlaySquare, Link2, Mail } from "lucide-react";
+import Link from 'next/link';
 
 const NAV_LINKS = [
   { label: "O mnie", href: "#about" },
@@ -105,12 +106,12 @@ export default function Footer() {
           <p className="text-text-muted text-xs">
             © {year} Adrian Derda. Wszelkie prawa zastrzeżone.
           </p>
-          <a
-            href="#"
+          <Link
+            href="/polityka-prywatnosci"
             className="text-text-muted text-xs hover:text-brand-accent transition-colors"
           >
             Polityka prywatności
-          </a>
+          </Link>
         </div>
       </div>
 
