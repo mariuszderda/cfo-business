@@ -1,5 +1,4 @@
 import GoogleAnalytics from '@/components/GoogleAnalytics';
-import Header from '@/components/Header';
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -19,6 +18,12 @@ const purposes = [
     retention: "do 12 miesięcy od ostatniego kontaktu",
   },
   {
+    purpose: "Newsletter",
+    data: "adres e-mail, imię (jeśli je podasz)",
+    basis: "art. 6 ust. 1 lit. a – zgoda",
+    retention: "do wypisania się z newslettera",
+  },
+  {
     purpose: "Zawarcie i wykonanie umowy",
     data: "dane kontaktowe i dane potrzebne do usługi",
     basis: "art. 6 ust. 1 lit. b – umowa",
@@ -31,28 +36,52 @@ const purposes = [
     retention: "5 lat od końca roku podatkowego",
   },
   {
-    purpose: "Bezpieczeństwo serwisu",
-    data: "adres IP, przeglądarka, czas wizyty (logi serwera)",
-    basis: "art. 6 ust. 1 lit. f – uzasadniony interes",
-    retention: "do 30 dni",
+    purpose: "Statystyki ruchu na stronie (Google Analytics)",
+    data: "identyfikator cookies, źródło wejścia (np. YouTube), odwiedzone podstrony, urządzenie, przeglądarka, przybliżona lokalizacja",
+    basis: "art. 6 ust. 1 lit. a – zgoda",
+    retention: "14 miesięcy lub do cofnięcia zgody",
   },
   {
+    // DOPISANE (nie było w dokumencie): formularz korzysta z reCAPTCHA
     purpose: "Ochrona formularza przed spamem (Google reCAPTCHA)",
     data: "adres IP, informacje o urządzeniu i przeglądarce, sposób korzystania ze strony, pliki cookies Google",
     basis: "art. 6 ust. 1 lit. f – uzasadniony interes",
     retention: "na czas weryfikacji wysyłki formularza",
   },
   {
-    purpose: "Statystyki ruchu na stronie (Google Analytics)",
-    data: "identyfikator cookies, źródło wejścia (np. YouTube), odwiedzone podstrony, urządzenie, przeglądarka, przybliżona lokalizacja",
-    basis: "art. 6 ust. 1 lit. a – zgoda",
-    retention: "14 miesięcy lub do cofnięcia zgody",
+    purpose: "Bezpieczeństwo serwisu",
+    data: "logi serwera (opis w sekcji 4)",
+    basis: "art. 6 ust. 1 lit. f – uzasadniony interes",
+    retention: "do 30 dni",
   },
+];
+
+const recipients: { name: string; role: string }[] = [
+  {name: "Vercel Inc. (USA)", role: "hosting strony"},
+  {
+    name: "Resend Inc. (USA)",
+    role: "wysyłka wiadomości z formularza kontaktowego",
+  },
+  {
+    name: "Zoho Corporation B.V. (Holandia), wspierana przez spółkę matkę Zoho Corporation Pvt. Ltd. (Indie)",
+    role: "poczta e-mail",
+  },
+  {
+    // ZMIENIONE: dopisana reCAPTCHA
+    name: "Google Ireland Limited (Irlandia)",
+    role: "usługa reCAPTCHA chroniąca formularz przed spamem oraz Google Analytics (to drugie tylko po wyrażeniu zgody na cookies analityczne)",
+  },
+  {
+    name: "dostawca narzędzia do wysyłki newslettera",
+    role: "tylko po zapisie na newsletter",
+  },
+  {name: "księgowy lub prawnik", role: "w razie potrzeby"},
 ];
 
 const link =
   "text-brand-accent underline underline-offset-4 decoration-brand-accent/40 hover:decoration-brand-accent transition-colors";
 const paragraph = "text-text-primary/80 leading-relaxed";
+const card = "rounded-md border border-brand-border bg-white p-5";
 
 function Section({
                    number,
@@ -79,7 +108,7 @@ function Section({
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <GoogleAnalytics/>
+      <GoogleAnalytics />
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24">
         <header>
           <p className="text-sm font-medium uppercase tracking-widest text-brand-accent mb-3">
@@ -99,7 +128,8 @@ export default function PrivacyPolicyPage() {
             <a className={link} href="https://www.adrianderda.pl">
               www.adrianderda.pl
             </a>{" "}
-            jest Adrian Derda (osoba fizyczna). Kontakt:{" "}
+            jest Adrian Derda, ul. Wiejska 63, 44-200 Rybnik (osoba fizyczna).
+            Kontakt:{" "}
             <a className={link} href={`mailto:${EMAIL}`}>
               {EMAIL}
             </a>
@@ -111,10 +141,7 @@ export default function PrivacyPolicyPage() {
           {/* Telefon: karty */}
           <div className="space-y-4 md:hidden">
             {purposes.map((row) => (
-              <div
-                key={row.purpose}
-                className="rounded-md border border-brand-border bg-white p-5"
-              >
+              <div key={row.purpose} className={card}>
                 <h3 className="font-semibold text-text-primary mb-3">
                   {row.purpose}
                 </h3>
@@ -179,47 +206,64 @@ export default function PrivacyPolicyPage() {
 
           <p className={paragraph}>
             Podanie danych jest dobrowolne, ale bez adresu e-mail nie będę mógł
-            odpowiedzieć. Nie podejmuję zautomatyzowanych decyzji i nie profiluję.
+            odpowiedzieć ani wysyłać newslettera. Zapis na newsletter wymaga
+            zaznaczenia zgody, a wypisać się można w każdej chwili linkiem w
+            każdej wiadomości. Nie podejmuję zautomatyzowanych decyzji i nie
+            profiluję.
           </p>
         </Section>
 
         <Section number={3} title="Komu przekazuję dane">
           <p className={paragraph}>
-            Dane przetwarzają w moim imieniu dostawca hostingu Vercel Inc. (USA),
-            dostawca usługi wysyłki wiadomości z formularza kontaktowego Resend
-            (USA) i dostawca poczty e-mail Zoho Corporation B.V. (Holandia),
-            wspierana przez spółkę matkę Zoho Corporation Pvt. Ltd. (Indie).
-            Google Ireland Limited (Irlandia) przetwarza dane jako dostawca
-            usługi reCAPTCHA chroniącej formularz przed spamem oraz – tylko po
-            wyrażeniu zgody na cookies analityczne – jako dostawca narzędzia
-            analitycznego. W razie potrzeby dostęp do danych może mieć też
-            księgowy lub prawnik.
+            Dane przetwarzają w moim imieniu, na podstawie umów powierzenia:
           </p>
+          <ul className="divide-y divide-brand-border rounded-md border border-brand-border bg-white">
+            {recipients.map((r) => (
+              <li
+                key={r.name}
+                className="px-5 py-3.5 text-sm sm:grid sm:grid-cols-[2fr_3fr] sm:gap-6"
+              >
+              <span className="block font-semibold text-text-primary">
+                {r.name}
+              </span>
+                <span className="block text-text-primary/80">{r.role}</span>
+              </li>
+            ))}
+          </ul>
           <p className={paragraph}>
-            Jeśli dane trafiają poza Europejski Obszar Gospodarczy (USA –
-            hosting, Resend i Google, Indie – spółka matka Zoho), odbywa się to
-            na podstawie
-            EU–US Data Privacy Framework lub standardowych klauzul umownych
-            zatwierdzonych przez Komisję Europejską.
-          </p>
-          <p className={paragraph}>
-            Nie sprzedaję danych i nie udostępniam ich w celach marketingowych.
+            Jeśli dane trafiają poza Europejski Obszar Gospodarczy (USA – Vercel,
+            Resend i Google, Indie – spółka matka Zoho), odbywa się to na
+            podstawie EU–US Data Privacy Framework lub standardowych klauzul
+            umownych zatwierdzonych przez Komisję Europejską. Nie sprzedaję
+            danych i nie udostępniam ich w celach marketingowych.
           </p>
         </Section>
 
-        <Section number={4} title="Cookies">
+        <Section number={4} title="Logi serwera">
+          <p className={paragraph}>
+            Serwer Vercel automatycznie zapisuje w logach: adres IP, datę i
+            godzinę wizyty, adres odwiedzanej podstrony, adres strony, z której
+            nastąpiło przejście, typ przeglądarki i systemu oraz informacje o
+            błędach. Dane te służą wyłącznie zapewnieniu bezpieczeństwa i
+            diagnozowaniu problemów technicznych i nie są łączone z Twoją
+            tożsamością.
+          </p>
+        </Section>
+
+        <Section number={5} title="Cookies">
+          {/* ZMIENIONE: w dokumencie były dwa rodzaje, dopisana reCAPTCHA */}
           <p className={paragraph}>
             Serwis używa trzech rodzajów plików cookies:
           </p>
           <div className="grid gap-4 md:grid-cols-3">
-            <div className="rounded-md border border-brand-border bg-white p-5">
+            <div className={card}>
               <h3 className="font-semibold text-text-primary mb-2">Niezbędne</h3>
               <p className="text-sm text-text-primary/80 leading-relaxed">
                 Potrzebne do działania strony i zapamiętania Twojego wyboru w
                 banerze cookies. Nie wymagają zgody.
               </p>
             </div>
-            <div className="rounded-md border border-brand-border bg-white p-5">
+            <div className={card}>
               <h3 className="font-semibold text-text-primary mb-2">
                 Bezpieczeństwa (Google reCAPTCHA)
               </h3>
@@ -230,16 +274,15 @@ export default function PrivacyPolicyPage() {
                 urządzeniu i sposobie korzystania ze strony.
               </p>
             </div>
-            <div className="rounded-md border border-brand-border bg-white p-5">
+            <div className={card}>
               <h3 className="font-semibold text-text-primary mb-2">
                 Analityczne (Google Analytics)
               </h3>
               <p className="text-sm text-text-primary/80 leading-relaxed">
                 Pokazują, ile osób odwiedza stronę, skąd przychodzą (np. z
                 YouTube) i które podstrony czytają. Uruchamiam je wyłącznie po
-                Twojej zgodzie w banerze cookies. Dane są zbiorcze, nie służą do
-                Twojej identyfikacji ani do reklam, a adresy IP nie są
-                zapisywane.
+                Twojej zgodzie w banerze cookies. Dane są zbiorcze i nie służą do
+                Twojej identyfikacji ani do reklam.
               </p>
             </div>
           </div>
@@ -261,17 +304,28 @@ export default function PrivacyPolicyPage() {
           </p>
         </Section>
 
-        <Section number={5} title="Twoje prawa">
+        <Section number={6} title="Bezpieczeństwo danych">
+          <p className={paragraph}>
+            Połączenie ze stroną jest szyfrowane (certyfikat SSL), więc dane z
+            formularzy są chronione w trakcie przesyłania. Dostęp do kont usług,
+            w których przechowuję dane, zabezpieczam silnymi hasłami i
+            uwierzytelnianiem dwuskładnikowym, a oprogramowanie strony regularnie
+            aktualizuję.
+          </p>
+        </Section>
+
+        <Section number={7} title="Twoje prawa">
           <p className={paragraph}>
             Masz prawo do dostępu do swoich danych i otrzymania ich kopii, ich
             sprostowania, usunięcia, ograniczenia przetwarzania i przeniesienia
             oraz do sprzeciwu wobec przetwarzania opartego na uzasadnionym
-            interesie. Zgodę na cookies analityczne możesz cofnąć w dowolnym
-            momencie, bez wpływu na zgodność z prawem wcześniejszego
-            przetwarzania.
+            interesie. Zgodę (na newsletter lub cookies analityczne) możesz
+            cofnąć w dowolnym momencie, bez wpływu na zgodność z prawem
+            wcześniejszego przetwarzania.
           </p>
           <p className={paragraph}>
-            Możesz też złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych (
+            Możesz też złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych,
+            ul. Stawki 2, 00-193 Warszawa (
             <a
               className={link}
               href="https://uodo.gov.pl"
@@ -288,7 +342,7 @@ export default function PrivacyPolicyPage() {
           </p>
         </Section>
 
-        <Section number={6} title="Zmiany polityki">
+        <Section number={8} title="Zmiany polityki">
           <p className={paragraph}>
             Polityka może być aktualizowana, a aktualna wersja jest zawsze
             dostępna w serwisie. Obowiązuje od 11.11.2026 r.
